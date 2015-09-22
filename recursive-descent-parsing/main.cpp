@@ -42,7 +42,7 @@ int lex();
 #define RIGHT_PAREN 26
 #define FLOAT_POINT 27
 void error(){
-	cout<<"error"<<endl;
+	return;
 }
 /* 
 main() {
@@ -285,18 +285,14 @@ void factor() {
 } /* End of function factor */
 
 int main(){
-	if
-((in_fp = fopen("front.in", "r")) == NULL)
-printf("ERROR - cannot open front.in \n");
-else
-{
-getChar();
-do
-{
-lex();
-expr();
-}
-while
-(nextToken != EOF);
-}
+	if ((in_fp = fopen("front.in", "r")) == NULL)
+		printf("ERROR - cannot open front.in \n");
+	else {
+		getChar();
+		do {
+			lex();
+			expr();
+		}
+		while (nextToken != EOF);
+	}
 }
