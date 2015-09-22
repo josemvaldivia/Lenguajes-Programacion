@@ -42,7 +42,7 @@ int lex();
 #define RIGHT_PAREN 26
 #define FLOAT_POINT 27
 void error(){
-	cout<<"error";
+	cout<<"error\n";
 }
 /* 
 main() {
