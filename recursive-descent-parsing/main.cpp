@@ -42,7 +42,7 @@ int lex();
 #define RIGHT_PAREN 26
 #define FLOAT_POINT 27
 void error(){
-	return;
+	cout<<"error";
 }
 /* 
 main() {
@@ -261,7 +261,7 @@ void term() {
 void factor() {
 	 printf("Enter <factor>\n");
 	/* Determine which RHS */
-	 if (nextToken == IDENT || nextToken == INT_LIT)
+	 if (nextToken == IDENT || nextToken == INT_LIT || nextToken == FLOAT)
 		/* Get the next token */
 	 	lex();
 		/* If the RHS is ( <expr>), call lex to pass over the
